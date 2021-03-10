@@ -1,0 +1,45 @@
+body{
+
+    color: #707070;
+
+}
+
+.docs{
+
+    background: #FAFAFA;
+    height: 400px;
+    width: 400px;
+    position: relative;
+    border-radius: 30px;
+    font-size: 30px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 80px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.docs-container{
+
+    width: 80%;
+    margin: auto;
+
+}
+
+@media (min-width: 1300px) {
+
+    .docs{
+
+        display: inline-block;
+        margin-left: 100px;
+
+    }
+
+    .docs-container{
+        text-align: center;
+        margin-top: 200px;
+    }
+
+}
