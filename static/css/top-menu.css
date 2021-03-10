@@ -1,0 +1,103 @@
+.top-menu-wrap{
+
+    box-shadow: 1px 1px 2px 2px #efefef;
+    right: 0;
+    height: 40px;
+    position: relative;
+
+}
+
+#menu-toggle {
+
+    height: 15px;
+    width: 15px;
+
+}
+
+#menu-toggle-a {
+
+    margin-top: 8px;
+    margin-left: 10px;
+    height: 15px;
+    width: 15px;
+    padding: 5px;
+    border-radius: 15px;
+    display: inline-block;
+    transition: transform 0.3s;
+    transform: rotate(90deg);
+
+}
+
+.org-selector{
+
+    width: 200px;
+    height: 30px;
+    border-radius: 10px;
+    background: #FAFAFA;
+    border: none;
+    margin-top: 5px;
+    display: inline-block;
+    position: absolute;
+    right: 90px;
+    top: 1px;
+
+}
+
+.org-selector:focus{
+
+    outline: none;
+
+}
+
+.profile-circle{
+
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    background: #FAFAFA;
+    text-align: center;
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 6px;
+    border: none;
+    padding: 0;
+
+}
+
+.profile-circle:focus{
+
+    outline: none;
+    background: #e5e5e5;
+
+}
+
+#profile-icon{
+
+    margin: 7px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    .hide-if-small {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .hide-content-if-small {
+        filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+}
+
+@media only screen and (min-width: 800px) {
+
+    .close-sidebar-wrap{
+
+        display: none;
+
+    }
+
+}
