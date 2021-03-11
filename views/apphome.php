@@ -29,7 +29,7 @@ function render_app_page($app){
                         break;
                     case "tamako-api":
                     case "tamako-api/":
-                    render_svc_not_available("Tamako API");
+                    render_tamako_app_page($urlm[0]);
                         die();
                         break;
                     case "updates-console":
