@@ -192,7 +192,7 @@ function render_tamako_app_page($app){
 
                     <label for="prov-id" class="lbl">Service ID</label> <input value="<?php echo $pSID; ?>" class="token-field" id="svc-id" disabled>
 
-                    <label for="prov-id" class="lbl">Service Secret</label> <input value="<?php echo $pID; ?>" class="token-field" id="svc-secret" disabled>
+                    <label for="prov-id" class="lbl">Service Secret</label> <input value="<?php echo $pSS; ?>" class="token-field" id="svc-secret" disabled>
                 </div>
             </div>
         </div>
