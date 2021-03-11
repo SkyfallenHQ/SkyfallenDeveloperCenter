@@ -33,6 +33,7 @@ SDC_Router::routePage("developerid","do_oauth_init");
 SDC_Router::routePage("developerid/callback","handle_oauth_callback");
 
 include_once SDC_ABSPATH."/views/svc_notavailable.php";
+include_once SDC_ABSPATH."/views/tamako_api.php";
 include_once SDC_ABSPATH."/views/apphome.php";
 SDC_Router::routePrefix("apps/manage","render_app_page", true,true,"redirect_to_login");
 
