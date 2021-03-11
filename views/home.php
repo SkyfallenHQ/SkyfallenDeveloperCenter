@@ -66,19 +66,7 @@ include SDC_ABSPATH."/partials/side-menu.php";
                 <p>Latest Announcements</p>
             </div>
             <div class="announcement-wrap" style="margin-top: 70px;">
-                <p class="announcement-title">All new SDC is now in beta</p>
-                <p class="announcement-info">By Skyfallen Worldwide Developer Relations - Today on 12.11PM</p>
-            </div>
-            <div class="announcement-wrap">
-                <p class="announcement-title">All new SDC is now in beta</p>
-                <p class="announcement-info">By Skyfallen Worldwide Developer Relations - Today on 12.11PM</p>
-            </div>
-            <div class="announcement-wrap">
-                <p class="announcement-title">All new SDC is now in beta</p>
-                <p class="announcement-info">By Skyfallen Worldwide Developer Relations - Today on 12.11PM</p>
-            </div>
-            <div class="announcement-wrap">
-                <p class="announcement-title">All new SDC is now in beta</p>
+                <p class="announcement-title">All new SDC gets its first beta.</p>
                 <p class="announcement-info">By Skyfallen Worldwide Developer Relations - Today on 12.11PM</p>
             </div>
         </div>
