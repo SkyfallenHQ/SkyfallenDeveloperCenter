@@ -57,7 +57,7 @@ if(!empty($_POST) && SDC_CSRF::verifyCSRF()){
 
         if ($_SESSION['user']->obj->accountstatus == "ACTIVE") {
             if (isset($_POST['app-id']) && isset($_POST['app-name']) && trim($_POST['app-id']) != "" && trim($_POST['app-name']) != "") {
-                $newApp = SDCApp::createApp($_SESSION['currentOrg'], "p.yigitkerem." . $_POST['app-id'], $_POST['app-name']);
+                $newApp = SDCApp::createApp($_SESSION['currentOrg'], $_SESSION['currentOrg']->obj->identifier."." . $_POST['app-id'], $_POST['app-name']);
                 if ($newApp !== false) {
                     header("Location:" . WEB_URL . "apps/manage/" . $newApp->obj->appid);
                 } else {
