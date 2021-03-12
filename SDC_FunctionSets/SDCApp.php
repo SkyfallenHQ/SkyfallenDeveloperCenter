@@ -135,6 +135,17 @@ class SDCApp
 
         $stmtb->execute();
 
+        $sql = "DELETE FROM appservices WHERE appid=?";
+
+        $stmtc = $connection->stmt_init();
+
+        $stmtc->prepare($sql);
+
+        $stmtc->bind_param("s",$appid);
+
+        $stmtc->execute();
+
+
         return true;
 
     }
