@@ -256,4 +256,33 @@ class SDCUser
 
     }
 
+    /**
+     * Gets a username from ID
+     * @param String $userID User ID to look for.
+     */
+    public static function getUsernameFromID($userID){
+
+        global $connection;
+
+        $sql = "SELECT * FROM users WHERE id=?";
+
+        $stmt = $connection->stmt_init();
+
+        $stmt->prepare($sql);
+
+        $stmt->bind_param("s",$userID);
+
+        $stmt->execute();
+
+        $result = $stmt->get_result();
+
+        if($result->num_rows == 0){
+            throw new Exception('UserNotFoundException');
+        }
+
+        return $result->fetch_object()->username;
+
+
+    }
+
 }
