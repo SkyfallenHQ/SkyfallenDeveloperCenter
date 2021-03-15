@@ -70,6 +70,8 @@ function handle_oauth_callback(){
         }
 
         $u = new SDCUser($userData['user_login']);
+        $orgID = SDCOrganisation::getIDFromIdentifier("p.".$u->obj->username);
+        $_SESSION['currentOrg'] = new SDCOrganisation($orgID);
         $u->login();
         header("Location: ".WEB_URL);
 
