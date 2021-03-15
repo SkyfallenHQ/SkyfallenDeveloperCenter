@@ -19,11 +19,20 @@ defined("SDC_ABSPATH") or die("Direct access is not allowed.");
 
         foreach ($uo as $org){
 
-            echo "<option>".$org->obj->orgname." (".$org->obj->identifier.")</option>";
+            $s = "";
+
+            if($org->obj->orgid == $_SESSION['currentOrg']->obj->orgid){
+                $s = "selected";
+            }
+
+            echo "<option value='".$org->obj->orgid."' ".$s.">".$org->obj->orgname." (".$org->obj->identifier.")</option>";
 
         }
 
         ?>
+        <optgroup label="------------">
+            <option value="newOrg">Create a new organisation</option>
+        </optgroup>
     </select>
     <button class="profile-circle" id="profile-circle" onclick="openPage('<?php the_weburl(); ?>profile')">
 
