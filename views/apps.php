@@ -33,9 +33,6 @@ function render_dev_apps(){
 
 $csrf = new SDC_CSRF();
 
-$orgID = SDCOrganisation::getIDFromIdentifier("p.".$_SESSION['user']->obj->username);
-$_SESSION['currentOrg'] = new SDCOrganisation($orgID);
-
 $message = "Manage your apps here.";
 
 if(!empty($_POST) && SDC_CSRF::verifyCSRF()){
@@ -52,13 +49,13 @@ if(!empty($_POST) && SDC_CSRF::verifyCSRF()){
 
         }else {
 
-            $message = "There is no such app that belongs to you";
+            $message = "There is no such app that belongs to you.";
 
         }
 
     } else {
 
-        if ($_SESSION['user']->obj->accountstatus == "ACTIVE") {
+        if ($_SESSION['currentOrg']->obj->orgstatus == "ACTIVE") {
             if (isset($_POST['app-id']) && isset($_POST['app-name']) && trim($_POST['app-id']) != "" && trim($_POST['app-name']) != "") {
                 $newApp = SDCApp::createApp($_SESSION['currentOrg'], $_SESSION['currentOrg']->obj->identifier."." . $_POST['app-id'], $_POST['app-name']);
                 if ($newApp !== false) {
