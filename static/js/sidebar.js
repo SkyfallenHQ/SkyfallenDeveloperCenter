@@ -16,6 +16,16 @@ $(document).ready(function () {
         closeNav()
     }
 
+    $("#org-select").change(function (){
+
+        if($("#org-select").val() == "newOrg" ){
+            window.location.href = WEB_URL+"organisations/new";
+        } else {
+            window.location.href = WEB_URL+"organisations/switch/"+$("#org-select").val();
+        }
+
+    })
+
 })
 
 function openNav() {
