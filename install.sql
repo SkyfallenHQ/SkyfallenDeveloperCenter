@@ -87,7 +87,7 @@ CREATE TABLE `organisations` (
 
 CREATE TABLE `orgmeta` (
                            `orgid` varchar(200) COLLATE utf8_turkish_ci NOT NULL,
-                           `metname` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
+                           `metaname` varchar(500) COLLATE utf8_turkish_ci NOT NULL,
                            `metaval` text COLLATE utf8_turkish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
