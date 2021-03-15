@@ -48,3 +48,22 @@ function sdc_redirect($to){
 function rand_md5_hash(){
     return md5(uniqid(rand(), true));
 }
+
+/**
+ * Validates Post Data
+ * @param Array $fields Array of all the fields to validate
+ * @return bool
+ */
+function validatePostData($fields){
+
+    foreach ($fields as $field){
+
+        if(!isset($_POST[$field]) or trim($_POST[$field]) == ""){
+            return false;
+        }
+
+    }
+
+    return true;
+
+}
