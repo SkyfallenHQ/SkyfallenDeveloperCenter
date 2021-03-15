@@ -51,7 +51,10 @@ function render_dev_profile(){
     <html>
     <head>
         <title>Skyfallen Developer Center</title>
-        <script type="text/javascript" src="<?php the_fileurl("static/js/jquery.js"); ?>"></script>
+        <script type="text/javascript" src="<?php the_fileurl("static/js/jquery.min.js"); ?>"></script>
+        <script>
+            const WEB_URL = "<?php echo WEB_URL; ?>";
+        </script>
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/side-menu.css"); ?>">
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/top-menu.css"); ?>">
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/profile.css"); ?>">
