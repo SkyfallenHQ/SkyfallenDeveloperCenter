@@ -25,8 +25,20 @@ SDC_Router::routePage("docs","render_dev_docs", true,"redirect_to_login");
 include_once SDC_ABSPATH."/views/profile.php";
 SDC_Router::routePage("profile","render_dev_profile", true,"redirect_to_login");
 
+include_once SDC_ABSPATH."/views/org_profile.php";
+SDC_Router::routePage("organisations/profile","render_org_profile_page", true,"redirect_to_login");
+
 include_once SDC_ABSPATH."/views/apps.php";
 SDC_Router::routePage("apps","render_dev_apps", true,"redirect_to_login");
+
+include_once SDC_ABSPATH."/views/create_org.php";
+SDC_Router::routePage("organisations/new","render_org_profile", true,"redirect_to_login");
+
+include_once SDC_ABSPATH."/views/org_members.php";
+SDC_Router::routePage("organisations/members","render_org_members", true,"redirect_to_login");
+
+include_once SDC_ABSPATH."/views/org_switch.php";
+SDC_Router::routePrefix("organisations/switch","render_org_switch", true,true,"redirect_to_login");
 
 include_once SDC_ABSPATH."/views/id_login.php";
 SDC_Router::routePage("developerid","do_oauth_init");
