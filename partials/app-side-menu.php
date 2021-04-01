@@ -26,6 +26,7 @@ defined("SDC_ABSPATH") or die("Direct access is not allowed.");
                 <button class="side-menu-btn" onclick="openPage('<?php echo WEB_URL."apps/manage/".$urlm[0]; ?>/app-center')">App Center</button>
                 <button class="side-menu-btn" onclick="openPage('<?php echo WEB_URL."apps/manage/".$urlm[0]; ?>/skyfallen-id')">Skyfallen ID</button>
                 <button class="side-menu-btn" onclick="openPage('<?php echo WEB_URL."apps/manage/".$urlm[0]; ?>/tamako-api')">Tamako API</button>
+                <button class="side-menu-btn" onclick="openPage('<?php echo WEB_URL."apps/manage/".$urlm[0]; ?>/app-logging')">App Logging</button>
             </li>
         </ul>
     </div>
