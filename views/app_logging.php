@@ -261,7 +261,7 @@ function render_logging_app_page($app,$urlm){
                             echo "<tr>";
                             echo "<td>".date('l jS F Y h:i:s A',$log->obj->time)."</td>";
                             echo "<td>".$log->obj->logtype."</td>";
-                            echo "<td><a href=\"".WEB_URL."/apps/manage/".$app->obj->appid."/app-logging/view/".$log->obj->logid."\">View</a></td>";
+                            echo "<td><a href=\"".WEB_URL."apps/manage/".$app->obj->appid."/app-logging/view/".$log->obj->logid."\">View</a></td>";
                             echo "</tr>";
 
                         }
