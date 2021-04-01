@@ -46,11 +46,22 @@ SDC_Router::routePage("developerid/callback","handle_oauth_callback");
 
 include_once SDC_ABSPATH."/views/svc_notavailable.php";
 include_once SDC_ABSPATH."/views/tamako_api.php";
+include_once SDC_ABSPATH."/views/app_logging.php";
 include_once SDC_ABSPATH."/views/apphome.php";
 SDC_Router::routePrefix("apps/manage","render_app_page", true,true,"redirect_to_login");
 
+include_once SDC_ABSPATH."/views/api/api_index.php";
+SDC_Router::routePage("api","execute_api_index");
+
+include_once SDC_ABSPATH."/views/api/log_app.php";
+SDC_Router::routePage("api/app-logging/log","execute_api_app_logging");
+
 // If nothing was routed, display 404
 if(!defined("ROUTED")){
+
+    // Route the API Prefix to a special function to display a json error
+    include_once SDC_ABSPATH."/views/api/api_notfound.php";
+    SDC_Router::routePrefix("api","execute_api_notfound",true);
 
     // Include the 404 Page.
     include_once SDC_ABSPATH."/SDC_Includes/404.php";
