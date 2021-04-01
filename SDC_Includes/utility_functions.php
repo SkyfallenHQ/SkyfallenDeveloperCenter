@@ -50,6 +50,19 @@ function rand_md5_hash(){
 }
 
 /**
+ * Safely returns a post value
+ * @param String $key POST Key
+ * @return String POST Value
+ */
+function safe_return_post_value($key){
+    if(isset($_POST[$key])){
+        return $_POST[$key];
+    } else {
+        return false;
+    }
+}
+
+/**
  * Validates Post Data
  * @param Array $fields Array of all the fields to validate
  * @return bool
