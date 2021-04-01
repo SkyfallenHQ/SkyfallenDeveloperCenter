@@ -19,8 +19,7 @@ function render_app_page($app){
 
         $app = new SDCApp($urlm[0]);
         if($app->obj->ownerorg = $_SESSION['currentOrg']->obj->orgid){
-
-            if(count($urlm) == 2 or (count($urlm) == 3 and $urlm[2] == "")){
+            if(count($urlm) == 2 or (count($urlm) == 3 and $urlm[2] == "") or (count($urlm) == 4 and $urlm[3] != "" and $urlm[1] == "app-logging")){
                 switch ($urlm[1]){
                     case "app-center":
                     case "app-center/":
@@ -29,17 +28,22 @@ function render_app_page($app){
                         break;
                     case "tamako-api":
                     case "tamako-api/":
-                    render_tamako_app_page($urlm[0]);
+                        render_tamako_app_page($urlm[0]);
                         die();
                         break;
                     case "updates-console":
                     case "updates-console/":
-                    render_svc_not_available("Updates Console");
+                        render_svc_not_available("Updates Console");
                         die();
                         break;
                     case "skyfallen-id":
                     case "skyfallen-id/":
-                    render_svc_not_available("Skyfallen ID");
+                        render_svc_not_available("Skyfallen ID");
+                        die();
+                        break;
+                    case "app-logging":
+                    case "app-logging/":
+                        render_logging_app_page($urlm[0],$urlm);
                         die();
                         break;
                     default:
