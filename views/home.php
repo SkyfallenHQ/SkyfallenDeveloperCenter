@@ -96,6 +96,16 @@ include SDC_ABSPATH."/partials/side-menu.php";
         </div>
     </div>
 </div>
+<?php
+if(isset($_GET['info'])){
+?>
+<div style="position: absolute; bottom: 20px; right: 10px; color: gray;">
+            Skyfallen Developer Center - <?php echo "Version ".THIS_VERSION."(".THIS_VERSION_NICKNAME.") running on ".SERVER_NAME; ?>
+</div>
+<?php
+}
+?>
+
 </body>
 </html>
 <?php }
