@@ -44,6 +44,7 @@ include_once SDC_ABSPATH."/SDC_FunctionSets/SDCOrganisation.php";
 include_once SDC_ABSPATH."/SDC_FunctionSets/SDCEmail.php";
 include_once SDC_ABSPATH."/SDC_FunctionSets/SDCApp.php";
 include_once SDC_ABSPATH."/SDC_FunctionSets/SDCService.php";
+include_once SDC_ABSPATH."/SDC_FunctionSets/SDC_LSLog.php";
 
 // Include all SCL Libraries
 include_once SDC_ABSPATH."/SkyfallenCodeLib/UpdatesConsoleConnector.php";
