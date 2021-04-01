@@ -45,6 +45,9 @@ define("SMTP_SERVER","");
 define("SMTP_PORT",465);
 define("SMTP_SECURITY","ssl");
 
+// MISC
+define("SERVER_NAME","");
+
 // Stop editing here. Rest of this file is the source code.
 
 // Attempt to connect to the SQL Server
