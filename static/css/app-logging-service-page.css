@@ -366,6 +366,7 @@ pre {
 .nav {
 
     text-align: center;
+    line-height: 35px;
 
 }
 
@@ -374,5 +375,20 @@ pre {
     padding: 5px 8px 5px 8px;
     background: gray;
     border-radius: 20px;
+
+}
+
+.clear-logs-btn {
+
+    position: absolute;
+    border: none;
+    background: none;
+    top: 7px;
+    right: 30px;
+
+}
+.clear-logs-btn:focus {
+
+    color: gray;
 
 }
