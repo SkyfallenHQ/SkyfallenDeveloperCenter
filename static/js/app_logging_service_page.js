@@ -9,7 +9,6 @@ $(document).ready(function () {
 function addPagerToTable(table, rowsPerPage = 10) {
 
     let tBodyRows = table.querySelectorAll('tBody tr');
-    console.log(tBodyRows)
     let numPages = Math.ceil(tBodyRows.length/rowsPerPage);
 
     let colCount = 
