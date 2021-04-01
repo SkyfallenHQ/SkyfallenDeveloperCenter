@@ -113,4 +113,16 @@ class SDCService
 
     }
 
+    /**
+     * Validates Service Details for a service
+     * @param String $svc_id ID of the service
+     * @param String $service_secret Secret of the service
+     * @return bool depending on the status of the test
+     */
+    public function validateCredentials($svc_id,$service_secret){
+
+        return $this->obj->serviceid == $svc_id and $this->obj->servicesecret == $service_secret;
+
+    }
+
 }
