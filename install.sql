@@ -146,6 +146,21 @@ CREATE TABLE `users` (
                          `country` varchar(40) COLLATE utf8_turkish_ci DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `applogs`
+--
+
+CREATE TABLE `applogservice` (
+                         `logid` INT(11) NOT NULL AUTO_INCREMENT , 
+                         `svcid` VARCHAR(500) NOT NULL ,
+                         `time` VARCHAR(250) NOT NULL ,
+                         `logtype` VARCHAR(500) NOT NULL ,
+                         `logdata` TEXT NOT NULL , 
+                         UNIQUE (`logid`)
+) ENGINE = InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
+
 --
 -- Indexes for dumped tables
 --
