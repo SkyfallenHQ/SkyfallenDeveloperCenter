@@ -263,14 +263,14 @@ function render_logging_app_page($app,$urlm){
                 </div>
             </div>
             <?php } else { ?>
-            <div class="welcome-msg" style="padding-top: 35px;">
+            <div class="welcome-msg" style="padding-top: 35px; height: fit-content;">
                 <div class="lb-headline">
                     <p>Log Viewer</p>
                 </div>
                 <div class="lb-box-iw" style="text-align: left; padding-left: 20px;">
                     <h3><?php echo $log->obj->logtype; ?></h4>
                     <h4><?php echo date('l jS F Y h:i:s A',$log->obj->time); ?></h3>
-                    <pre><?php
+                    <pre style="width: fit-content; height: fit-content; min-width: 60%;"><?php
                             echo json_encode(json_decode($log->obj->logdata), JSON_PRETTY_PRINT);
                         ?></pre>
                 </div>
