@@ -170,7 +170,7 @@ function render_logging_app_page($app,$urlm){
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/app-logging-service-page.css?revision=3"); ?>">
         <script type="text/javascript" src="<?php the_fileurl("static/js/sidebar.js"); ?>"></script>
         <script type="text/javascript" src="<?php the_fileurl("static/js/greeting.js"); ?>"></script>
-        <script type="text/javascript" src="<?php the_fileurl("static/js/app_logging_service_page.js"); ?>"></script>
+        <script type="text/javascript" src="<?php the_fileurl("static/js/app_logging_service_page.js?revision=2"); ?>"></script>
         <?php 
             if($urlm[2] != "view"){
         ?>
@@ -236,11 +236,11 @@ function render_logging_app_page($app,$urlm){
             </div>
             <div class="log-box">
                 <div class="lb-headline">
-                    <p>Logs for this app</p>
+                    <p style="display: inline-block;">Logs for this app</p>
+                    <input type="text" class="token-field" placeholder="Search with ID..." id="logsearch" style="width: 200px;" onkeyup="searchLogs()">
                     <form method="post">
                         <?php $csrf->put(); ?>
                         <input name="clearlogs" hidden>
-                        <input type="text" class="token-field" placeholder="Search..." id="logsearch">
                         <button type="submit" class="clear-logs-btn"><svg style="height: 25px; width: 25px;"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
                     </form>
                 </div>
