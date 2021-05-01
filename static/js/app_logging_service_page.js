@@ -17,13 +17,13 @@ function addPagerToTable(table, rowsPerPage = 10) {
     )
     .reduce((a,b) => a + parseInt(b.colSpan), 0);
 
+    if(numPages == 1)
+        return;
+
     table
     .createTFoot()
     .insertRow()
     .innerHTML = `<td colspan=${colCount}><div class="nav"></div></td>`;
-
-    if(numPages == 1)
-        return;
 
     for(i = 0;i < numPages;i++) {
 

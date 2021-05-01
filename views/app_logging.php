@@ -167,10 +167,10 @@ function render_logging_app_page($app,$urlm){
         <script type="text/javascript" src="<?php the_fileurl("static/js/jquery.min.js"); ?>"></script>
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/side-menu.css"); ?>">
         <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/top-menu.css"); ?>">
-        <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/app-logging-service-page.css?revision=3"); ?>">
+        <link rel="stylesheet" type="text/css" href="<?php the_fileurl("static/css/app-logging-service-page.css?revision=4"); ?>">
         <script type="text/javascript" src="<?php the_fileurl("static/js/sidebar.js"); ?>"></script>
         <script type="text/javascript" src="<?php the_fileurl("static/js/greeting.js"); ?>"></script>
-        <script type="text/javascript" src="<?php the_fileurl("static/js/app_logging_service_page.js?revision=2"); ?>"></script>
+        <script type="text/javascript" src="<?php the_fileurl("static/js/app_logging_service_page.js?revision=3"); ?>"></script>
         <?php 
             if($urlm[2] != "view"){
         ?>
