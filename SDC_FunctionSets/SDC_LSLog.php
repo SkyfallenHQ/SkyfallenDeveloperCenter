@@ -51,7 +51,7 @@ class SDC_LSLog
 
         global $connection;
 
-        $sql = "INSERT INTO applogservice (svcid,time,logtype,logdata) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO applogservice (logid,svcid,time,logtype,logdata) VALUES (?,?,?,?)";
 
         $stmt = $connection->stmt_init();
 
