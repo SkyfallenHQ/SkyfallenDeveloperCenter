@@ -240,6 +240,7 @@ function render_logging_app_page($app,$urlm){
                     <form method="post">
                         <?php $csrf->put(); ?>
                         <input name="clearlogs" hidden>
+                        <input type="text" class="token-field" placeholder="Search..." id="logsearch">
                         <button type="submit" class="clear-logs-btn"><svg style="height: 25px; width: 25px;"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-trash"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg></button>
                     </form>
                 </div>
@@ -260,6 +261,7 @@ function render_logging_app_page($app,$urlm){
                         foreach($logs as $log){
 
                             echo "<tr>";
+                            echo "<td style='display: none;'>".$log->obj->logid."</td>";
                             echo "<td>".date('l jS F Y h:i:s A',$log->obj->time)."</td>";
                             echo "<td>".$log->obj->logtype."</td>";
                             echo "<td><a href=\"".WEB_URL."apps/manage/".$app->obj->appid."/app-logging/view/".$log->obj->logid."\">View</a></td>";
