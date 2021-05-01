@@ -148,7 +148,8 @@ function render_logging_app_page($app,$urlm){
 
         try{
 
-            $log = new SDC_LSLog($urlm[3]);
+            $currentProvision = new SDCService($app->obj->identifier.".app-logging-service");
+            $log = new SDC_LSLog($urlm[3],$currentProvision->safeProvisionMeta('serviceid'));
 
         } catch (Exception $e){
 

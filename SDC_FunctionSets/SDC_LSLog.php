@@ -11,21 +11,22 @@ class SDC_LSLog
 
     /**
      * SDC_LSLog constructor.
-     * @param String $logid Service Provision ID
+     * @param String $logid Service Log ID
+     * @param String $svcid Service ID
      * @throws Exception
      */
-    public function __construct($logid)
+    public function __construct($logid,$svcid)
     {
 
         global $connection;
 
-        $sql = "SELECT * FROM applogservice WHERE logid=?";
+        $sql = "SELECT * FROM applogservice WHERE logid=? and svcid=?";
 
         $stmt = $connection->stmt_init();
 
         $stmt->prepare($sql);
 
-        $stmt->bind_param("i",$logid);
+        $stmt->bind_param("ss",$logid,$svcid);
 
         $stmt->execute();
 
@@ -58,9 +59,13 @@ class SDC_LSLog
 
         $t = time();
 
-        $stmt->bind_param("siss",$svcid,$t,$type,$data);
+        $id = rand_md5_hash();
+
+        $stmt->bind_param("ssiss",$id,$svcid,$t,$type,$data);
 
         $stmt->execute();
+
+        return $id;
 
     }
 
@@ -92,7 +97,7 @@ class SDC_LSLog
             
             while($row = $sr->fetch_assoc()){
 
-                $newobj = new SDC_LSLog($row['logid']);
+                $newobj = new SDC_LSLog($row['logid'],$svcid);
                 array_push($r,$newobj);
 
             }

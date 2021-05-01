@@ -153,7 +153,7 @@ CREATE TABLE `users` (
 --
 
 CREATE TABLE `applogservice` (
-                         `logid` INT(11) NOT NULL AUTO_INCREMENT , 
+                         `logid` VARCHAR(255) NOT NULL AUTO_INCREMENT , 
                          `svcid` VARCHAR(500) NOT NULL ,
                          `time` VARCHAR(250) NOT NULL ,
                          `logtype` VARCHAR(500) NOT NULL ,
