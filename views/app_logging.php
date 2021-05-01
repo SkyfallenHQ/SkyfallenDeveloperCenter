@@ -20,11 +20,11 @@ function render_logging_app_page($app,$urlm){
         $urlm[2] = false;
     }
 
+    $app = new SDCApp($app);
+
     if($urlm[2] != "view"){
 
         $csrf = new SDC_CSRF();
-
-        $app = new SDCApp($app);
 
         $currentProvision = null;
         $pID = "";
